@@ -11,10 +11,12 @@ def calculateSalary(salary) :
         if(int(x) >= salary):
             tax = salaryTable[x]
             break
-
-    print("세     율 :",tax,"%")
-    print("세전 연봉 :",salary,"만원")
-    print("세후 연봉 :", int(salary - (salary/100*tax)),"만원")
+    print()
+    print("※※※※연봉계산※※※※")
+    print("▶세     율 :",tax,"%")
+    print("▶세전 연봉 :",salary,"만원")
+    print("▶세후 연봉 :", int(salary - (salary/100*tax)),"만원")
+    print("※※※※※※※※※※※※")
 
 salary = int(input("월급을 입력해주세요.(만원 단위 입력)(ex=300) => "))
 calculateSalary(salary*12)

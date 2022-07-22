@@ -21,10 +21,12 @@ def busFee(age, payment) :
             if(int(x) <= age):
                 fee = cashTable[x]
                 break
-
-    print("나     이 :",age,"세")
-    print("지불 유형 :",payment)
-    print("버스 요금 :",fee,"원")
+    print()
+    print("※※※※요금계산※※※※")
+    print("▶나     이 :",age,"세")
+    print("▶지불 유형 :",payment)
+    print("▶버스 요금 :",fee,"원")
+    print("※※※※※※※※※※※※")
 
 age = int(input("나이름 입력해주세요.(ex=30) => "))
 payment = str(input("결제 수단을 입력해주세요.(ex= 현금/카드) => "))
