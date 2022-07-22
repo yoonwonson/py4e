@@ -1,5 +1,5 @@
 #버스 요금
-def calculateBusFee(age, payment) :
+def calcBusFee(age, payment) :
     #기본 요금 선언
     fee = 0
     #결제 수단 구분
@@ -30,4 +30,4 @@ def calculateBusFee(age, payment) :
 
 age = int(input("나이름 입력해주세요.(ex=30) => "))
 payment = str(input("결제 수단을 입력해주세요.(ex= 현금/카드) => "))
-calculateBusFee(age, payment)
+calcBusFee(age, payment)
