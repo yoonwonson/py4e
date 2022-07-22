@@ -1,5 +1,5 @@
 #연봉 계산기
-def calculateSalary(salary) :
+def calcSalary(salary) :
     #연봉 테이블 선언
     salaryTable = {"1200":6, "4600":15, "8800":24, "15000":35, "30000":38, "50000":40}
     #연봉테이블 키 조회
@@ -19,4 +19,4 @@ def calculateSalary(salary) :
     print("※※※※※※※※※※※※")
 
 salary = int(input("월급을 입력해주세요.(만원 단위 입력)(ex=300) => "))
-calculateSalary(salary*12)
+calcSalary(salary*12)
