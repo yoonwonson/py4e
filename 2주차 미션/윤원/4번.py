@@ -6,25 +6,25 @@ age = int(age)
 # 버스 요금을 알아내는 함수
 def bus_fare(age, payment):
     if payment == '카드':
-        if age < 8 or age>=75:
+        if age < 8 or age >= 75 :
            return '무료'
-        elif age < 14 or age >=8:
+        elif age < 14 or age >= 8 :
             return '450원'
-        elif age < 20 or age >=14:
+        elif age < 20 or age >= 14 :
             return '720원'
-        elif age < 75 or age>=20:
+        elif age < 75 or age>= 20 :
 
             return '1200원'
         else :
             return '무료'
     else:
-        if age < 8 or age >=75:
+        if age < 8 or age >= 75 :
                return '무료'
-        elif age < 14 or age >=8:
+        elif age < 14 or age >= 8 :
             return '450원'
-        elif age < 20 or age >=14:
+        elif age < 20 or age >= 14 :
             return '1000원'
-        elif age < 75 or age>=20:
+        elif age < 75 or age>= 20 :
             return '1300원'
         else :
             return '무료'
