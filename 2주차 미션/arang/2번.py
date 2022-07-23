@@ -3,11 +3,10 @@ try :
 except :
     print('숫자를 입력해주세요.')
     quit()
+
 YearlyBefore = MonthlyPayment*12
 
-
 print('세전연봉',YearlyBefore)
-
 
 if YearlyBefore<=1200 :
     print('세후연봉',YearlyBefore*0.94)
