@@ -4,7 +4,7 @@ pay = input("카드/현금 ")
 age = int(age)
 
 # 버스 요금을 알아내는 함수
-def bus_fare(age, payment):
+def busFare(age, payment):
     if payment == '카드':
         if age < 8:
            return '무료'
@@ -31,4 +31,4 @@ def bus_fare(age, payment):
 
 print('나이:',age)
 print('지불방법:',pay)
-print('버스요금:',bus_fare(age, pay))
+print('버스요금:',busFare(age, pay))
