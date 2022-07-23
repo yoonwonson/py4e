@@ -1,6 +1,6 @@
 # 나이와 버스 요금 입력받기
 age = input("나이를 입력하세요: (ex.30) => ")
-pay = input("결제수단을 입력하세요: (ex.카드/현금) =>  ")
+pay = input("결제수단을 입력하세요 (ex. 카드/현금) =>  ")
 age = int(age)
 
 # 버스 요금을 알아내는 함수
@@ -17,7 +17,7 @@ def busFare(age, payment):
         else :
             return '무료'
     else:
-        if age < 8 or age >=75 :
+        if age < 8 or age >= 75 :
                return '무료'
         elif age >= 20 or age < 75 : 
             return '1300원'
