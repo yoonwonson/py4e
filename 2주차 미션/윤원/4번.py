@@ -12,8 +12,7 @@ def busFare(age, payment):
             return '1200원'
         elif age >= 14 :
             return '720원'
-        else :
-            age >= 8
+        elif age >= 8 :
             return '450원'
     
     else:
@@ -23,8 +22,7 @@ def busFare(age, payment):
             return '1300원'
         elif age >= 14 :
             return '1000원'
-        else :
-            age >= 8
+        elif age >= 8 :
             return '450원'
 
 print('나이:',age)
