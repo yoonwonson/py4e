@@ -6,21 +6,21 @@ monthly=input('월급을 입력하세요(만 단위): ')
 monthly=int(monthly)
 
 def yearly(a):
-    if a * 12 < 1200 :
-        return a * 12 * (100 - 6) / 100
-    elif a * 12 < 4600 :
-        return a * 12 * (100 - 15) / 100
-    elif a * 12 < 8800 :
-        return a * 12 * (100 - 24) / 100
-    elif a * 12 < 15000 :
-        return a * 12 * (100 -35) / 100
-    elif a * 12 < 30000 :
-        return a * 12 * (100 - 38) / 100
-    elif a * 12 < 50000 :
-        return a * 12 * (100 - 40) / 100
+    year = a * 12
+    if year  < 1200 :
+        return year  * (100 - 6) / 100
+    elif year  < 4600 :
+        return year  * (100 - 15) / 100
+    elif year  < 8800 :
+        return year  * (100 - 24) / 100
+    elif year  < 15000 :
+        return year  * (100 -35) / 100
+    elif year  < 30000 :
+        return year  * (100 - 38) / 100
+    elif year   < 50000 :
+        return year  * (100 - 40) / 100
     else :
-        return a * 12 * (100 - 42) / 100
+        return year * (100 - 42) / 100
 
 print('세전 연봉:',monthly * 12,'만원')
 print('세전 연봉:',int(yearly(monthly)),'만원')
-
