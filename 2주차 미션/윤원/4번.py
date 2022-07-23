@@ -30,5 +30,5 @@ def bus_fare(age, payment):
             return '무료'
 
 print('나이:',age)
-print('지:',pay)
+print('지불방법:',pay)
 print('버스요금:',bus_fare(age, pay))
