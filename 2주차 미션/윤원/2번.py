@@ -7,17 +7,17 @@ monthly=int(monthly)
 
 def yearly(a):
     year = a * 12
-    if year  < 1200 :
+    if year  <= 1200 :
         return year  * (100 - 6) / 100
-    elif year  < 4600 :
+    elif year  <= 4600 :
         return year  * (100 - 15) / 100
-    elif year  < 8800 :
+    elif year  <= 8800 :
         return year  * (100 - 24) / 100
-    elif year  < 15000 :
+    elif year  <= 15000 :
         return year  * (100 -35) / 100
-    elif year  < 30000 :
+    elif year  <= 30000 :
         return year  * (100 - 38) / 100
-    elif year   < 50000 :
+    elif year  <= 50000 :
         return year  * (100 - 40) / 100
     else :
         return year * (100 - 42) / 100
