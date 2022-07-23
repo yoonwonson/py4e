@@ -28,6 +28,6 @@ def calcBusFee(age, payment) :
     print("▶버스 요금 :",fee,"원")
     print("※※※※※※※※※※※※")
 
-age = int(input("나이를 입력해주세요.(ex=30) => "))
+age = int(input("나이를 입력해주세요.(ex= 30) => "))
 payment = str(input("결제 수단을 입력해주세요.(ex= 현금/카드) => "))
 calcBusFee(age, payment)

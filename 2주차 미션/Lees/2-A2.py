@@ -18,5 +18,5 @@ def calcSalary(salary) :
     print("▶세후 연봉 :", int(salary - (salary/100*tax)),"만원")
     print("※※※※※※※※※※※※")
 
-salary = int(input("월급을 입력해주세요.(만원 단위 입력)(ex=300) => "))
+salary = int(input("월급을 입력해주세요.(만원 단위 입력)(ex= 300) => "))
 calcSalary(salary*12)
