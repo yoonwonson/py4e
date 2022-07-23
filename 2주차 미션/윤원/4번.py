@@ -18,7 +18,7 @@ def busFare(age, payment):
             return '무료'
     else:
         if age < 8 or age >= 75 :
-               return '무료'
+            return '무료'
         elif age >= 20 or age < 75 : 
             return '1300원'
         elif age >= 14 or age < 20 :
