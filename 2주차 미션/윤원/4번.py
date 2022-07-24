@@ -1,5 +1,11 @@
+#예외처리
+try: 
+    age = int(input("나이를 입력하세요: (ex.30) => ")
+except :
+    print('숫자를 입력해주세요')
+    quit()
+
 # 나이와 버스 요금 입력받기
-age = input("나이를 입력하세요: (ex.30) => ")
 pay = input("결제수단을 입력하세요 (ex. 카드/현금) =>  ")
 age = int(age)
 
