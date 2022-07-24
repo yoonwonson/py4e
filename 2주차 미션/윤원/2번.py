@@ -1,6 +1,6 @@
 #예외처리
 try :
-    monthly= int(input('월급을 입력하세요(만 단위): ')
+    monthly= input('월급을 입력하세요(만 단위): ')
 except :
     print('숫자를 입력해주세요.')
     quit()
@@ -8,8 +8,6 @@ except :
 # 월급 입력받기
 from tkinter import E
 
-
-monthly=input('월급을 입력하세요(만 단위): ')
 monthly=int(monthly)
 
 def yearly(a):
