@@ -28,6 +28,31 @@ def calcBusFee(age, payment) :
     print("▶버스 요금 :",fee,"원")
     print("※※※※※※※※※※※※")
 
-age = int(input("나이를 입력해주세요.(ex= 30) => "))
-payment = str(input("결제 수단을 입력해주세요.(ex= 현금/카드) => "))
-calcBusFee(age, payment)
+while (1):
+    age = input("나이를 입력해주세요.(ex= 30) => ")
+    payment = input("결제 수단을 입력해주세요.(ex= 현금/카드) => ")
+
+    #예외 처리
+    try:
+         age = int(age)
+    except Exception as e:
+        print()
+        print("※※※※※※※입력오류※※※※※※※")
+        print("숫자를 입력해주세요.(입력값 => "+age+")")
+        print("※※※※※※※※※※※※※※※※※※")
+        print()
+        continue
+    try:
+        payment = str(payment)
+        if (payment != "현금" and payment != "카드") :
+            raise Exception()
+    except Exception as e:
+        print()
+        print("※※※※※※※입력오류※※※※※※※")
+        print("현금/카드를 입력해주세요.(입력값 => "+payment+")")
+        print("※※※※※※※※※※※※※※※※※※")
+        print()
+        continue
+
+    calcBusFee(age, payment)
+    break
