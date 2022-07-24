@@ -1,7 +1,7 @@
 # 이름과 점수 입력받기
 name = input("이름을 입력하세요: ")
 score = input("점수를 입력하세요: ")
-score=int(score)
+score = int(score)
 
 # 학점 출력 함수
 def grader(name,score):
