@@ -1,6 +1,6 @@
 #예외처리
 try: 
-    age = int(input("나이를 입력하세요: (ex.30) => ")
+    age = input("나이를 입력하세요: (ex.30) => ")
 except :
     print('숫자를 입력해주세요')
     quit()
