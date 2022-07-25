@@ -19,5 +19,17 @@ def calcGrade(name, score) :
     print("※※※※※※※※※※※※")
 
 name = str(input("이름을 입력해주세요.(ex=홍길동) => "))
-score = int(input("점수를 입력해주세요.(ex=95) => "))
-calcGrade(name, score)
+while (1):
+    score = input("점수를 입력해주세요.(ex=1~100) => ")
+    #예외 처리
+    try:
+         score = int(score)
+         calcGrade(name, score)
+         break
+    except Exception as e:
+        print()
+        print("※※※※※※※입력오류※※※※※※※")
+        print("숫자를 입력해주세요.(입력값 => "+score+")")
+        print("※※※※※※※※※※※※※※※※※※")
+        print()
+        continue
