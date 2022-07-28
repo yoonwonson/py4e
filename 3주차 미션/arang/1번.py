@@ -26,4 +26,4 @@ def gugudan(number) :
 # 출력
 print('몇 단? :',number)
 print(number,'단')
-print(gugudan(number))
+(gugudan(number))
