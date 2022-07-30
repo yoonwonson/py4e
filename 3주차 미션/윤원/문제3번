@@ -1,0 +1,16 @@
+def evenNum():
+    n=int(input("첫번째 수:"))
+    m=int(input("두번째 수:"))
+
+    even = [[i,'짝수']for i in range(n,m+1) if i % 2 == 0]
+    md=(n+m)//2
+    
+    c=0
+    for j in even:
+        if j[0]==md:c=even.index(j)
+
+    if md % 2 == 0:even.insert(c+1,[md,'중앙값'])
+
+    for j in even: print(j[0],j[1])
+
+evenNum()
