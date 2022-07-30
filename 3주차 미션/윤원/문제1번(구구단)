@@ -1,0 +1,21 @@
+def gugudan(num):
+    print('%s단'%num)
+    time=0
+    i=1
+    while(1):
+        time=num*i
+        if time>50:break
+        if i % 2 == 1:print('%s x %s = %s*'%(num,i,time))
+        i += 1
+
+while True:
+    try:
+        num = int(input("몇단?:"))
+    except:
+        num = 0
+
+    if num < 1:
+        print("1이상의 정수를 입력해주세요")
+    else:
+        gugudan(num)
+        break
