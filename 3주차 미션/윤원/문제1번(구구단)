@@ -5,7 +5,7 @@ def gugudan(num):
     while(1):
         time=num*i
         if time>50:break
-        if i % 2 == 1:print('%s x %s = %s*'%(num,i,time))
+        if i % 2 == 1:print('%s x %s = %s'%(num,i,time))
         i += 1
 
 while True:
