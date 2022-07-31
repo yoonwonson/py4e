@@ -24,6 +24,7 @@ def gugudan(number) :
 
 
 # 출력
-print('몇 단? :',number)
+print('==============================================')
+print('몇 단? :')
 print(number,'단')
 (gugudan(number))
