@@ -5,7 +5,7 @@ def calc(n, m) :
         if (i%2 == 0) :
             print("▶ 짝  수 :",i)
 
-        if (not yn and i >= (n+m)/2) :
+        if (not yn and i == (n+m)/2) :
             if (i%2 == 0) :
                 print("▶ 중앙값 :",i)
             yn = True
