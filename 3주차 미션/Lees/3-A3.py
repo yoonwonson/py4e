@@ -1,14 +1,12 @@
 def calc(n, m) :
     print("\n※※※※※※※출  력※※※※※※※")
-    yn = False
     for i in range(n,m+1):
         if (i%2 == 0) :
             print("▶ 짝  수 :",i)
 
-        if (not yn and i == (n+m)/2) :
+        if (i == (n+m)/2) :
             if (i%2 == 0) :
                 print("▶ 중앙값 :",i)
-            yn = True
     print("※※※※※※※※※※※※※※※※※※")
 
 
