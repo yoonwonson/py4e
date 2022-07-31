@@ -1,0 +1,21 @@
+def count_prime_number(n,m):
+    cnt=0
+    for i in range(n+1,m):
+        if i==1 : continue
+    else:
+        prime = True 
+        for j in range(2,i):
+            if i % j == 0:prime = False;break
+        if prime: cnt +=1; print('소수개수',cnt)
+    
+while True:
+    try:
+        n=int(input("첫번째 수: "))
+        m=int(input("두번째 수: "))
+
+        if (n>m): print("첫번째 수는 두번째 수보다 작아야 합니다.")
+    except: 
+        n=m=0
+
+    if (n<1 or m<1):print("**1이상의 접수를 입력해주세요.**")
+    else : count_prime_number(n,m);break
