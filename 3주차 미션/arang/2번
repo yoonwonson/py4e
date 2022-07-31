@@ -1,0 +1,60 @@
+
+# 입력
+def rsp(a):
+    if a == '가위' or a == '0':
+        return 0
+    elif a == '바위' or a == '1':
+        return 1
+    else :
+        return 2
+
+#가위바위보 승패 결정
+def rsp_advanced(games) :
+    minus = int(rsp(user)) - int(rsp(computer))
+    if minus == 1 or minus == -2 :
+        print('====================================')
+        print('나 :',user)
+        print('컴퓨터 :',computer)
+        print(zork,"번째 판 내가 이겼다!")
+        print('====================================')
+
+    elif minus == 0 :
+        print('====================================')
+        print('나 :',user)
+        print('컴퓨터 :',computer)
+        print(zork,"번째 판 비겼다!")
+        print('====================================')
+
+    else :
+        print('====================================')
+        print('나 :',user)
+        print('컴퓨터 :',computer)
+        print(zork,"번째 판 졌다!")
+        print('====================================')
+
+
+
+while True :
+    try :
+        games = int(input("몇 판을 진행하시겠습니까? : "))
+        break
+    except :
+        print('숫자를 입력해주세요.')
+        continue
+zork = 0
+
+while True :
+    if games>0 :
+        zork = zork + 1
+        games = games - 1
+        while True :
+            user = str(input("가위:0,바위:1,보:2를 입력하세요."))
+            if (user == "가위" or user == "바위" or user == "보" or user == "1" or user == "2" or user == "0") :
+                    import random
+                    computer = random.choice(['가위','바위','보'])
+                    rsp_advanced(games)
+                    break
+
+            else :
+                print("가위:0,바위:1,보:2 중에서 입력해주세요.")
+                continue
