@@ -1,3 +1,4 @@
+import random
 
 # 입력
 def rsp(a):
@@ -8,8 +9,19 @@ def rsp(a):
     else :
         return 2
 
-#가위바위보 승패 결정
+global win
+global loss
+global same
+
+win = 0
+loss = 0
+same = 0
+
+#가위바위보
 def rsp_advanced(games) :
+    global win
+    global loss
+    global same
     minus = int(rsp(user)) - int(rsp(computer))
     if minus == 1 or minus == -2 :
         print('====================================')
@@ -17,6 +29,7 @@ def rsp_advanced(games) :
         print('컴퓨터 :',computer)
         print(zork,"번째 판 내가 이겼다!")
         print('====================================')
+        win = win + 1
 
     elif minus == 0 :
         print('====================================')
@@ -24,6 +37,7 @@ def rsp_advanced(games) :
         print('컴퓨터 :',computer)
         print(zork,"번째 판 비겼다!")
         print('====================================')
+        same = same + 1
 
     else :
         print('====================================')
@@ -31,7 +45,7 @@ def rsp_advanced(games) :
         print('컴퓨터 :',computer)
         print(zork,"번째 판 졌다!")
         print('====================================')
-
+        loss = loss + 1
 
 
 while True :
@@ -44,13 +58,12 @@ while True :
 zork = 0
 
 while True :
-    if games>0 :
+    if games > 0 :
         zork = zork + 1
         games = games - 1
         while True :
             user = str(input("가위:0,바위:1,보:2를 입력하세요."))
             if (user == "가위" or user == "바위" or user == "보" or user == "1" or user == "2" or user == "0") :
-                    import random
                     computer = random.choice(['가위','바위','보'])
                     rsp_advanced(games)
                     break
@@ -58,3 +71,8 @@ while True :
             else :
                 print("가위:0,바위:1,보:2 중에서 입력해주세요.")
                 continue
+    elif games == 0 :
+        break
+
+print('나의 전적 :',win,'승',same,'무',loss,'패')
+print('컴퓨터의 전적 :',loss,'승',same,'무',win,'패')
