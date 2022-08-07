@@ -58,4 +58,4 @@ if __name__ == '__main__':
 마침내 그 문을 닫아줄 사람이 오고 있는 것이다 
     """
 
-    count_word(input_str, "사람")
+    count_word(input_str, "이")
