@@ -1,5 +1,5 @@
 def check_id(number):
-    if len(number) != 14 or number.find("-") == -1 or number[6:7] != "-":  # validity check
+    if len(number) != 14 or number.find("-") == -1 or number[6:7] != "-":  
         if (len(number) != 14 or number.find("-") == -1):
             print("잘못된 번호입니다.\n 올바른 번호를 입력하세요.")
         if (number[6:7] != "-"):
@@ -7,14 +7,13 @@ def check_id(number):
         return runProcess()
 
     else:
-        # Extract values
         year = str(number[:2])
         month = str(number[2:4])
         day = str(number[4:6])
         gender = str(number[7:8])
         s_gender = "None"
 
-        flag = check_year(year, gender)  # check year
+        flag = check_year(year, gender) 
 
         if flag != False:
             # Check validity
@@ -56,6 +55,5 @@ def runProcess():
     return check_id(number)
 
 
-# ---main---
 year, month, day, gender = runProcess()
 print(f"\n생년월일 : {year}년 {month}월 {day}일 , 성별: {gender}")
