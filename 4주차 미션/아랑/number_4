@@ -30,6 +30,8 @@ def check_id(number) :
                 print('19'+number[:2]+'년'+number[2:4]+'월','남자')
             elif number[7] == '2' :
                 print('19'+number[:2]+'년'+number[2:4]+'월','여자')
+            else :
+                print('잘못입력하였습니다. 올바른 주민등록번호를 입력해주세요')
         else :
             print('o 혹은 x만 입력할 수 있습니다.')
     else :
