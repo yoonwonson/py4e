@@ -1,5 +1,5 @@
 def check_id(a):
-    if len(a) != 14 or  a[6] != '-':
+    if len(a) != 13 or  a[6] != '-':
         print("잘못된 번호입니다.\n올바른 번호를 넣어주세요.")
         return False 
         
@@ -20,13 +20,13 @@ while check_id(a) == False:
     
 if 0 <= int(a[:2])<=21:
     ox = input("2000이후 출생자 입니까? 맞으면 o 아니면 x:")
-    if ox == "o":
-        if (a[7] != 3 and a[7] != 4):
-            print("잘못된 번호입니다.\n올바른 번호를 넣어주세요.")
-        elif a[7] == "3":
+    if ox == "o":   
+        if a[7] == "3":
             print("{}년 {}월 남자".format(a[:2],a[2:4]))
         elif a[7] == "4":
             print("{}년 {}월 여자".format(a[:2],a[2:4]))
+        else:
+            print("잘못된 번호입니다.\n올바른 번호를 넣어주세요.")
         
     else:
         if a[7] == "1" or a[7] == "3":
