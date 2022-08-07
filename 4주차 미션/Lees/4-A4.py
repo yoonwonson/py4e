@@ -3,7 +3,7 @@ def checkId(id) :
     gender = ""
     if (id[6] != "-") or (len(id) != 14) :
         print("▶ 잘못된 번호입니다.")
-        return
+        return False
 
     if (id[7] == "1" or id[7] == "3") :
         gender = "남자"
@@ -11,23 +11,22 @@ def checkId(id) :
         gender = "여자"
     else :
         print("▶ 잘못된 번호입니다.")
-        return
+        return False
 
     if ( 21 >= int(id[0:2]) >= 0) :
         print("▶ 2000년 이후 출생자.")
 
-    print("▶ "+id[0:2]+"년"+id[2:4]+"월", gender)
-
-
+    print("▶ "+id[0:2]+"년 "+id[2:4]+"월", gender)
     print("※※※※※※※※※※※※※※※※※※")
+    return True
 
 while(1) :
     id = input("주민번호를 입력하세요. : ")
     try:
         int(id[0:6])
         int(id[7:14])
-        checkId(id)
-        break
+        if(checkId(id)) :
+            break
     except Exception as e:
         print()
         print("※※※※※※※입력오류※※※※※※※")
