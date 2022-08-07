@@ -1,0 +1,11 @@
+def comma(n):
+    if len(n)<4:
+        return n
+    if n[0]=="-":
+        return "-"+comma(n[1:])
+    if "." in n:
+        return comma(n[:n.find(".")]) + n[n.find("."):]
+    if len(n)>=4:
+        return comma(n[:-3]) + ',' + n[-3:]
+n=input("숫자를 입력하십시오: ")
+print(comma(n))
