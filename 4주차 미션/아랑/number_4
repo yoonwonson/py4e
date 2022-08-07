@@ -10,6 +10,7 @@ while True :
                 break
             else :
                 print('잘못입력하였습니다.')
+                continue
     else :
         print('잘못입력하였습니다.')
         continue
