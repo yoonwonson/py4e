@@ -16,7 +16,6 @@ def check_id(number):
         flag = check_year(year, gender) 
 
         if flag != False:
-            # Check validity
             if gender in ["1", "3"]:
                 s_gender = "남자"
             elif gender in ["2", "4"]:
