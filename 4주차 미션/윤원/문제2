@@ -1,0 +1,61 @@
+def count_word(text, word):
+    text_save = open("text.txt", "w", encoding="UTF8")
+    text_save.write(text)
+    text_save.close()
+
+    count = 0  
+    word_save = ""  
+
+    f_1 = open("text.txt")  
+    for line in f_1:  
+        if word in line:  
+            for s in line:
+                word_save = word_save + s  
+                if word_save == word:  
+                    count += 1  # count +1
+                if len(word_save) == len(word):  
+                    word_save = word_save[1:]
+
+    print("파일에 '" + word + "' 문자가 얼마나 존재할까요?")
+    print(str(count)+"개")  
+
+
+if __name__ == '__main__':
+    input_str = """
+바람이 커튼을 밀어서 커튼이 집 안 쪽을 차지할 때나 
+많은 비를 맞은 벋나무가 늘어져 
+길 한가운데로 쏠리듯 들어와 있을 때 
+사람이 있다고 느끼면서 잠시 놀라는 건 
+거기 사람이 있기 때문이다
+
+낯선 곳에서 잠을 자다가 
+갑자기 들리는 흐르는 물소리
+등짝을 훑고 지나가는 지진의 진동
+
+밤길에서 마주치는 눈이 멀 것 같은 빛은 어떤가
+마치 그 빛이 그 사람한테서 뿜어나오는 광채 같다면 
+떄마침 사람이 왔기 때문이다
+
+잠시 자리를 비운 탁자 위에 이파리 하나가 떨어져 있거나 
+멀쩡한 하늘에서 빗방울이 떨어져서 하늘을 올려다볼때도 
+누가 왔나 하고 느끼는 건 
+누군가가 왔기 때문이다
+
+팔목에 실을 묶는 사람들은
+팔목에 중요한 운명의 길목이 지나고 있다고 믿는 사람들이겠다 
+
+인생이라는 잎들을 매단 큰 나무 한그루를 
+오래 바라보는 이 저녁 
+내 손에 굵은 실을 매어줄 사람 하나
+저 나무 뒤에서 오고 있다 
+
+실이 끊어질 듯 손목이 끊어질 듯 
+단단히 실을 묶어줄 사람 위해 
+이 저녁을 퍼다가 밥을 차려야 한다 
+
+우리는 저마다 
+자기 힘으로는 닫지 못하는 문이 하나씩 있는데 
+마침내 그 문을 닫아줄 사람이 오고 있는 것이다 
+    """
+
+    count_word(input_str, "사람")
