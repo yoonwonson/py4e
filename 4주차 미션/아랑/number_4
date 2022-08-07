@@ -1,0 +1,50 @@
+#주민등록번호는 6자리 이후에 -로 구분되어야 하고 길이는 -포함 14임
+#뒷자리는 1,3 은 남자 2,4는 여자
+#00 ~ 21로 시작할 경우 2000년 이후 출생자인지 물어 볼 것 (맞으면 o 틀리면 x)
+#뒷자리 3, 4를 가질 수 있는 사람은 00년생 이후 출생자 밖에 없음
+
+while True :
+    number = input('주민등록번호를 입력해주세요(-포함하여 14자리로 입력바랍니다)')
+    if len(number) == 14 :
+        if number[6] != '-' :
+            print('잘못입력하였습니다.')
+            continue
+        else :
+            if number[7] == '1' or number[7] == '2' or number[7] == '3' or number[7] == '4' :
+                break
+            else :
+                print('잘못입력하였습니다.')
+
+    else :
+        print('잘못입력하였습니다.')
+        continue
+
+
+
+def check_id(number) :
+    if (int(number[:2]) <= 21) :
+        birth = input('2000년 이후 출생자입니까? 맞으면 o 틀리면 x')
+        if birth == 'o' :
+            if number[7] == '3' :
+                print('20'+number[:2]+'년'+number[2:4]+'월','남자')
+            elif number[7] == '4' :
+                print('20'+number[:2]+'년'+number[2:4]+'월','여자')
+            else :
+                print('잘못입력하였습니다. 올바른 주민등록번호를 입력해주세요')
+                quit()
+
+        elif birth == 'x' :
+            if number[7] == '1' :
+                print('19'+number[:2]+'년'+number[2:4]+'월','남자')
+            elif number[7] == '2' :
+                print('19'+number[:2]+'년'+number[2:4]+'월','여자')
+        else :
+            print('o 혹은 x만 입력할 수 있습니다')
+
+    else :
+        if number[7] == '1' :
+            print('19'+number[:2]+'년'+number[2:4]+'월','남자')
+        elif number[7] == '2' :
+            print('19'+number[:2]+'년'+number[2:4]+'월','여자')
+
+check_id(number)
