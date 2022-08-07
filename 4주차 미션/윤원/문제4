@@ -39,7 +39,7 @@ def check_year(year, gender):
                 return False
         elif q == "x":  # born in 1900 ~ 1921
             if gender not in ["1", "2"]:
-                print("C잘못된 번호입니다. 성별과 출생년도를 정확히 입력하였는지 확인하세요.")
+                print("잘못된 번호입니다. 성별과 출생년도를 정확히 입력하였는지 확인하세요.")
                 return False
         else:
             print(" 잘못된 답변입니다. o 와 x 로 답변하세요.")
