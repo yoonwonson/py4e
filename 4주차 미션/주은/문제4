@@ -1,5 +1,5 @@
 def check_id(a):
-    if len(a) != 13 or  a[6] != '-':
+    if len(a) != 14 or  a[6] != '-':
         print("잘못된 번호입니다.\n올바른 번호를 넣어주세요.")
         return False 
         
