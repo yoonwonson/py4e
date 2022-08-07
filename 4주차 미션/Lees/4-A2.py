@@ -9,7 +9,7 @@ def countWord(txt, word) :
     findTxt = 0
     while (findTxt + txtLen >= txtLen) :
         findTxt = txt.find(word)
-        if (findTxt > 0) :
+        if (findTxt > -1) :
             count = count + 1
             txt = txt[findTxt+wordLen : txtLen]
         elif (findTxt == -1) :

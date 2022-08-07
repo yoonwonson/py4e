@@ -1,13 +1,13 @@
 def checkId(id) :
     print("\n※※※※※※※주번검증※※※※※※※")
     gender = ""
-    if (id[7] != "-") and (len(id) != 14) :
+    if (id[6] != "-") and (len(id) != 14) :
         print("▶ 잘못된 번호입니다.")
         return
 
-    if (id[8] == "1" or id[8] == "3") :
+    if (id[7] == "1" or id[7] == "3") :
         gender = "남자"
-    elif (id[8] == "2" or id[8] == "4") :
+    elif (id[7] == "2" or id[7] == "4") :
         gender = "여자"
     else :
         print("▶ 잘못된 번호입니다.")
