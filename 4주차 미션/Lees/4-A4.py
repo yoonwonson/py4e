@@ -1,7 +1,7 @@
 def checkId(id) :
     print("\n※※※※※※※주번검증※※※※※※※")
     gender = ""
-    if (id[6] != "-") and (len(id) != 14) :
+    if (id[6] != "-") or (len(id) != 14) :
         print("▶ 잘못된 번호입니다.")
         return
 
