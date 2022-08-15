@@ -1,0 +1,35 @@
+def rank_list(alist):
+    return alist[1]
+
+def grader(s,a):
+    rank = []
+    for i in s:
+        score = 0
+        score_list = []
+        alist = i.split(",")
+        for j in range(len(a)):
+            
+            if a[j] == int(alist[1][j]):
+               score += 10
+        score_list.append(alist[0])
+        score_list.append(score)
+        #print(score_list)
+        rank.append(score_list)
+    #print(rank)
+    rank.sort(key = rank_list, reverse = True)
+    #print(rank)
+    for k in range(5):
+        print("학생: {}점수: {}점 {}등".format(rank[k][0],rank[k][1],k+1))
+      
+
+# 학생 답
+s = ["김갑,3242524215",
+"이을,3242524223",
+"박병,2242554131",
+"최정,4245242315",
+"정무,3242524315"]
+
+# 정답지
+a = [3,2,4,2,5,2,4,3,1,2]
+
+grader(s,a)
