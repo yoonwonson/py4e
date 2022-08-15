@@ -65,4 +65,4 @@ else:
         onehundreddays=adddays
         onehundredmonth=int(couple_month)+3-12 
         onehundredyear=int(couple_year)+1
-print(str(onehundredyear)+'년',str(onehundredmonth)+'월',str(onehundreddays)+'일이 100일입니다! 준비하세요~')
+print(str(onehundredyear)+'년',str(onehundredmonth)+'월',str(onehundreddays)+'일이 100일입니다! 진심이 담긴 선물을 준비해보는건 어떨까요?')
