@@ -46,7 +46,6 @@ def good_customer(info):
             f"구매횟수:{temp[5][value]}")
 
 
-
 if __name__ == '__main__':
     info = "abc,21세,010-1234-5678,남자,서울,5," \
            "cdb,25세,x,남자,서울,4," \
