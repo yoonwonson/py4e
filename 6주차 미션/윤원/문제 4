@@ -38,12 +38,12 @@ def good_customer(info):
     temp = list(my_dict.values())
     for value in vip_index_list:
         print(
-            f"할인 쿠폰을 받을 회원정보 아이디:{temp[0][value]}, "
-            f"나이:{temp[1][value]}, "
-            f"전화번호:{temp[2][value]}, "
-            f"성별:{temp[3][value]}, "
-            f"지역:{temp[4][value]}, "
-            f"구매횟수:{temp[5][value]}")
+            f"<할인 쿠폰을 받을 회원정보> \n 아이디:{temp[0][value]}\n "
+            f"나이: {temp[1][value]}\n "
+            f"전화번호: {temp[2][value]}\n "
+            f"성별: {temp[3][value]}\n "
+            f"지역: {temp[4][value]}\n "
+            f"구매횟수: {temp[5][value]}")
 
 
 if __name__ == '__main__':
