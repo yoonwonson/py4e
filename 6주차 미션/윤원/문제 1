@@ -1,0 +1,57 @@
+def good_customer(info):
+    my_dict = dict()
+    my_dict['아이디'] = []
+    my_dict['나이'] = []
+    my_dict['전화번호'] = []
+    my_dict['성별'] = []
+    my_dict['지역'] = []
+    my_dict['구매횟수'] = []
+
+    split_info = info.split(',')  
+
+    for i in range(0, 6):
+        my_dict['아이디'].append(split_info[i * 6])
+        my_dict['나이'].append(split_info[i * 6 + 1])
+
+        # 조건 3 : 전화번호 없으면, 000-0000-0000으로 출력하라.
+        phone_number = split_info[i * 6 + 2]
+        if phone_number == 'x':
+            phone_number = '000-0000-0000'
+
+        my_dict['전화번호'].append(phone_number)
+
+        my_dict['성별'].append(split_info[i * 6 + 3])
+        my_dict['지역'].append(split_info[i * 6 + 4])
+        my_dict['구매횟수'].append(int(split_info[i * 6 + 5]))  # 비교를 위해, int형으로 형변환.
+
+    # 회원 정보 출력.
+    print(my_dict)
+
+    my_list = (sorted([(value, index) for index, value in enumerate(my_dict['구매횟수'])], reverse=True))
+    vip_index_list = []
+    for value, index in my_list:
+        if value < 8:
+            break
+
+        if my_dict['전화번호'][index] != '000-0000-0000':
+            vip_index_list.append(index)
+    temp = list(my_dict.values())
+    for value in vip_index_list:
+        print(
+            f"할인 쿠폰을 받을 회원정보 아이디:{temp[0][value]}, "
+            f"나이:{temp[1][value]}, "
+            f"전화번호:{temp[2][value]}, "
+            f"성별:{temp[3][value]}, "
+            f"지역:{temp[4][value]}, "
+            f"구매횟수:{temp[5][value]}")
+
+
+
+if __name__ == '__main__':
+    info = "abc,21세,010-1234-5678,남자,서울,5," \
+           "cdb,25세,x,남자,서울,4," \
+           "bbc,30세,010-2222-3333,여자,서울,3," \
+           "ccb,29세,x,여자,경기,9," \
+           "dab,26세,x,남자,인천,8," \
+           "aab,23세,010-3333-1111,여자,경기,10"
+    good_customer(info)
